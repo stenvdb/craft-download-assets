@@ -34,11 +34,18 @@ class DownloadAssetsPlugin {
 
   elementSelectAddButtonClick() {
     setTimeout(() => {
-      // Find the select button
-      const submit = document.querySelector('.modal.elementselectormodal .btn.submit');
-      const elements = document.querySelector('.modal.elementselectormodal .elements');
-      if (submit) submit.addEventListener('click', this.onElementSelected);
-      if (elements) elements.addEventListener('dblclick', this.onElementSelected);
+      if (Garnish.Modal.visibleModal) {
+        const submit = Garnish.Modal.visibleModal.$container[0].querySelector('.modal.elementselectormodal .btn.submit');
+        const elements = Garnish.Modal.visibleModal.$container[0].querySelector('.modal.elementselectormodal .elements');
+        if (submit) {
+          submit.removeEventListener('click', this.onElementSelected);
+          submit.addEventListener('click', this.onElementSelected);
+        }
+        if (elements) {
+          elements.removeEventListener('dblclick', this.onElementSelected);
+          elements.addEventListener('dblclick', this.onElementSelected);
+        }
+      }
     }, 1000);
   }
 
