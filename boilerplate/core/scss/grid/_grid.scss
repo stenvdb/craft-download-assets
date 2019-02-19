@@ -1,0 +1,37 @@
+@function col-width($col, $total) {
+  @return calc(100% / #{$total} * #{$col});
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.row {
+  @apply .flex .flex-wrap .mx-auto;
+  max-width: $maxWidth;
+
+  & & {
+    margin-left: -#{$gutters / 2};
+    margin-right: -#{$gutters / 2};
+  }
+}
+
+@responsive {
+  .columns {
+    flex: 0 0 100%;
+    padding: 0 $gutters / 2;
+
+    @for $i from 1 through length($columnClasses) {
+      $class: nth($columnClasses, $i);
+      &.#{$class} { width: col-width($i, length($columnClasses)); }
+    }
+  }
+}
+
+.columns {
+  @screen sm {
+    flex: 0 1 auto;
+    @for $i from 1 through length($columnClasses) {
+      $class: nth($columnClasses, $i);
+      &.offset-by-#{$class} { margin-left: col-width($i, length($columnClasses)); }
+    }
+  }
+}

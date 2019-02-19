@@ -1,0 +1,9 @@
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@each $selector, $size in $headingSizes {
+  #{$selector} {
+    font-size: (strip-units($size) / 16) + rem;
+  }
+}

@@ -1,0 +1,27 @@
+body.ltr .element.linked .label {
+  padding-right: 20px;
+}
+
+body.ltr .element.removable.linked .label {
+  padding-right: 40px;
+}
+
+.element .download {
+  position: absolute;
+  right: 22px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 19px;
+    height: 14px;
+    background-image: url('../img/inline-svg/download.svg');
+    background-size: 19px 14px;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  &:hover::before {
+    background-image: url('../img/inline-svg/download-focus.svg');
+  }
+}

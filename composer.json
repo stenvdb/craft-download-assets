@@ -1,0 +1,40 @@
+{
+    "name": "stenvdb/craft-download-assets",
+    "description": "Adds a download link next to assets",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "download assets"
+    ],
+    "support": {
+        "docs": "https://github.com/stenvdb/download-assets/blob/master/README.md",
+        "issues": "https://github.com/stenvdb/download-assets/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sten Van den Bergh",
+            "homepage": "http://www.stenvdb.be/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "stenvdb\\downloadassets\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Download Assets",
+        "handle": "download-assets",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/stenvdb/download-assets/master/CHANGELOG.md",
+        "class": "stenvdb\\downloadassets\\DownloadAssets"
+    }
+}
