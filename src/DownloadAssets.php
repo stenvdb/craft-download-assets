@@ -30,7 +30,7 @@ use yii\base\Event;
  *
  * @author    Sten Van den Bergh
  * @package   DownloadAssets
- * @since     1.0.0
+ * @since     1.0.1
  *
  */
 class DownloadAssets extends Plugin
@@ -54,7 +54,7 @@ class DownloadAssets extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public $schemaVersion = '1.0.1';
 
     // Public Methods
     // =========================================================================

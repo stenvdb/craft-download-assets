@@ -18,7 +18,7 @@
  *
  * @author    Sten Van den Bergh
  * @package   DownloadAssets
- * @since     1.0.0
+ * @since     1.0.1
  */
 return [
     'Download Assets plugin loaded' => 'Download Assets plugin loaded',
