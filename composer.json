@@ -11,8 +11,8 @@
         "download assets"
     ],
     "support": {
-        "docs": "https://github.com/stenvdb/download-assets/blob/master/README.md",
-        "issues": "https://github.com/stenvdb/download-assets/issues"
+        "docs": "https://github.com/stenvdb/craft-download-assets/blob/master/README.md",
+        "issues": "https://github.com/stenvdb/craft-download-assets/issues"
     },
     "license": "MIT",
     "authors": [
@@ -34,7 +34,7 @@
         "handle": "download-assets",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/stenvdb/download-assets/master/CHANGELOG.md",
+        "documentationUrl": "https://github.com/stenvdb/craft-download-assets/blob/master/README.md",
         "class": "stenvdb\\downloadassets\\DownloadAssets"
     }
 }
