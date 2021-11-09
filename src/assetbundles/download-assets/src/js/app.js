@@ -74,12 +74,34 @@ class DownloadAssetsPlugin {
       const a = document.createElement('a');
       const label = field.querySelector('.label');
       if (field && label) {
-        a.setAttribute('target', '_blank');
-        a.setAttribute('href', field.dataset.url);
         a.classList.add('download');
         a.classList.add('icon');
         field.insertBefore(a, label);
         field.classList.add('linked');
+
+        a.addEventListener('click', (event) => {
+          event.preventDefault();
+
+          const [f] = Craft.createForm();
+          const form = document.body.appendChild(f);
+          form.innerHTML = Craft.getCsrfInput();
+          const action = document.createElement('input');
+          action.name = 'action';
+          action.type = 'hidden';
+          action.value = 'assets/download-asset';
+          const assetId = document.createElement('input');
+          assetId.name = 'assetId';
+          assetId.type = 'hidden';
+          assetId.value = field.dataset.id;
+          const submit = document.createElement('input');
+          submit.type = 'submit';
+          submit.value = 'Submit';
+          form.appendChild(action);
+          form.appendChild(assetId);
+          form.appendChild(submit);
+          form.submit();
+          document.body.removeChild(form);
+        });
       }
     });
   }
