@@ -2,7 +2,7 @@
     "name": "stenvdb/craft-download-assets",
     "description": "Adds a download link next to assets",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": [
         "craft",
         "cms",
