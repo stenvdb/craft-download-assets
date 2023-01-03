@@ -1,4 +1,4 @@
-# Download Assets plugin for Craft CMS 3.x
+# Download Assets plugin for Craft CMS 3.x/4.x
 
 Adds a download icon next to assets fieldtypes in the control panel.
 
@@ -6,7 +6,7 @@ Adds a download icon next to assets fieldtypes in the control panel.
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 3.0.0-beta.23 or later, or Craft 4.0.0-alpha.1 or later.
 
 ## Installation
 

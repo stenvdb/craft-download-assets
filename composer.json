@@ -2,7 +2,7 @@
     "name": "stenvdb/craft-download-assets",
     "description": "Adds a download link next to assets",
     "type": "craft-plugin",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "craftcms/cms": "^3.0.0-RC1|^4.0.0-alpha.1"
     },
     "autoload": {
         "psr-4": {
